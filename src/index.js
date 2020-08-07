@@ -11,7 +11,5 @@ app.get('/', (rec, res) => {
     res.sendfile(path.resolve(__dirname + "/../public/index.html"));
 });
 
-require('./controllers/authControllers')(app);
-require('./controllers/projectController')(app);
-
+require('./app/controllers/index')(app);
 app.listen(3333);
